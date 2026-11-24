@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1> Student Expense Tracker</h1>
+            <p>Manage your daily expenses easily!</p>
+        </header>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <h2 id="totalAmount">₹0.00</h2>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Records</h3>
+                <h2 id="totalCount">0</h2>
+            </div>
+        </section>
+
+        <section class="expense-form">
+            <h2>Add New Expense</h2>
+
+            <form id="expenseForm">
+
+                <div class="form-group">
+                    <label>Your Expense</label>
+                    <input
+                        type="text"
+                        id="expenseName"
+                        placeholder="Enter expense name"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Amount ₹</label>
+                    <input
+                        type="number"
+                        id="expenseAmount"
+                        placeholder="Enter amount"
+                        min="0.01"
+                        step="any"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="expenseCategory">
+                        <option value="">Select Category</option>
+                        <option value="Travel">Food</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Education">Education</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="add-btn">
+                    + Add Expense
+                </button>
+
+            </form>
+
+            <p id="errorMessage"></p>
+        </section>
+
+        <section class="expense-list">
+
+            <div class="list-header">
+                <h2>Your Expenses</h2>
+
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Education">Education</option>
+                </select>
+            </div>
+
+            <div id="expenseContainer">
+                <p class="empty-message">
+                    No expenses added yet!
+                </p>
+            </div>
+
+        </section>
+
+        
+
+    </div>
+
+</body>
+</html>
